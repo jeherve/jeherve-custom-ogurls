@@ -14,11 +14,12 @@
 /**
  * Use a custom OG URL tag in Jetpack's Open Graph Meta tags if one is provided in post_meta.
  *
+ * @uses https://developer.jetpack.com/hooks/jetpack_open_graph_tags/
+ *
  * @param array $tags Array of Open Graph Meta tags.
  * @param array $args Array of image size parameters.
  */
 function jeherve_capital_title_og( $tags, $args ) {
-
 	// Are we looking at a single post / page / CPT. If not, bail.
 	if ( ! is_singular() ) {
 		return $tags;
