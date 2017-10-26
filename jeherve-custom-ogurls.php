@@ -19,7 +19,7 @@
  * @param array $tags Array of Open Graph Meta tags.
  * @param array $args Array of image size parameters.
  */
-function jeherve_capital_title_og( $tags, $args ) {
+function jeherve_custom_og_url( $tags, $args ) {
 	// Are we looking at a single post / page / CPT. If not, bail.
 	if ( ! is_singular() ) {
 		return $tags;
@@ -46,4 +46,4 @@ function jeherve_capital_title_og( $tags, $args ) {
 	// Return tags, modified or not.
 	return $tags;
 }
-add_filter( 'jetpack_open_graph_tags', 'jeherve_capital_title_og', 20, 2 );
+add_filter( 'jetpack_open_graph_tags', 'jeherve_custom_og_url', 20, 2 );

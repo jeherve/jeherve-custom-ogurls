@@ -27,6 +27,20 @@ If you do not see a Custom Fields interface in your post editor, make sure it is
 
 ![Screen Options](https://cloud.githubusercontent.com/assets/426388/24169702/c07b4ab8-0e7e-11e7-9138-bc365ece7832.png)
 
+= Why would I want to do that? =
+
+This plugin is especially useful when switching from HTTP to HTTPS on your site, and if you want to keep the number of Facebook shares you had collected for some of your posts when your site was still using HTTP.
+
+In an ideal world, Facebook would detect that the HTTP URL now redirects to HTTPs, and move the sharing counts over as well. Unfortunately, that does not always happen. Facebook recommends [the following](https://developers.facebook.com/docs/sharing/webmasters/crawler#updating) to keep the sharing counts. This plugin will allow you to do that for the posts that matter to you, while letting Facebook collect sharing counts for the new, HTTPS URL, for all the other posts where you do not specify a `custom_og_url` custom field.
+
+For the posts where you want to keep the sharing counts from before the switch:
+1. Install and activate [this plugin](https://github.com/automattic/jetpack-addons/archive/custom-og-urls.zip).
+2. Go to Posts > All Posts
+3. Find the post you want to edit.
+4. Open the editor.
+5. Follow the instructions above to locate the Custom Fields interface.
+6. Create a new custom field with the name `custom_og_url`. The value should be the post URL, but with `http://` instead of `https://`.
+
 = More info =
 
 Find out more about this plugin here:
